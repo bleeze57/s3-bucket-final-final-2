@@ -1,0 +1,138 @@
+<div class="form-center">
+<form action="/api/users" method="POST" id="add_user">
+    <div class="new_bucket">
+        <div class="form-group">
+            <label for="name" class ="text-bold">Name</label>
+            <input type="text" name="name" value="" placeholder="Mukmen">
+        </div>
+        <div class="form-group">
+            <label for="Email" class ="text-bold">Email</label>
+            <input type="text" name="email" value="" placeholder="Mukmen@aerodyne.group">
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">Request Level</label>
+        </div>
+        <div class="form-group">
+            <label for="reqLevel" class ="text-light"></label>
+            <div class="radio inline">
+                <input type="radio" name="reqLevel" value="Manager" >
+                <label for="reqLevel" class="text-light">manager</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="reqLevel" value="Pilot" >
+                <label for="reqLevel" class ="text-light">pilot</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="bucketName" class ="text-bold">Bucket Name</label>
+            <input type="text" name="bucketName" value="" placeholder="aerodyne-group">
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">Bucket Region</label>
+        </div>
+        <div class="form-group" style="width:200px">
+            <label for="bucketRegion" class="text-bold"></label>
+            <select name="bucketRegion" >
+                <option value="us-east-1">us-east-1(N. Virginia)</option>
+                <option value="us-east-2">us-east-2(Ohio)</option>
+                <option value="us-west-1">us-east-1(N. California)</option>
+                <option value="us-west-2">us-east-2(Oregon)</option>
+                <option value="ap-south-1">ap-south-1(Mumbai)</option>
+                <option value="ap-northeast-3">ap-northeast-3(Osaka)</option>
+                <option value="ap-northeast-2">ap-northeast-2(Seoul)</option>
+                <option value="ap-northeast-1">ap-northeast-1(Singapore)</option>
+                <option value="ap-southeast-2">ap-southeast-2(Sydney)</option>
+                <option value="ap-southeast-1">ap-southeast-1(Tokyo)</option>
+                <option value="ca-central-1">ca-central-1(Canada)</option>
+                <option value="eu-central-1">eu-central-1(Frankfurt)</option>
+                <option value="eu-west-1">eu-west-1(Ireland)</option>
+                <option value="eu-west-2">eu-west-2(London)</option>
+                <option value="eu-west-3">eu-west-3(Paris)</option>
+                <option value="eu-north-1">eu-north-1(Stockholm)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">Public Access </label>
+        </div>
+        <div class="form-group">
+            <label for="publicAccess" class ="text-bold"></label>
+            <div class="radio inline">
+                <input type="radio" name="publicAccess" value="Enable" >
+                <label for="publicAccess" class ="text-light">enable</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="publicAccess" value="disable" >
+                <label for="publicAccess" class ="text-light">disable</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="versioning" class ="text-bold">Bucket Versioning</label>
+        </div>
+        <div class="form-group">
+            <label for="versioning" class ="text-light"></label>
+            <div class="radio inline">
+                <input type="radio" name="versioning" value="Enable" >
+                <label for="versioning" class ="text-light">enable</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="versioning" value="disable" >
+                <label for="versioning" class ="text-light">disable</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">CORS Setting</label>
+        </div>
+        <div class="form-group">
+            <label for="cors" class ="text-light"></label>
+            <div class="radio inline">
+                <input type="radio" name="cors" value="Enable" >
+                <label for="cors" class ="text-light">enable</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="cors" value="disable" >
+                <label for="cors" class ="text-light">disable</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">Bucket Policy</label>
+        </div>
+        <div class="form-group">
+            <label for="bucketPolicy" class ="text-light"></label>
+            <div class="radio inline">
+                <input type="radio" name="bucketPolicy" value="Get" >
+                <label for="bucketPolicy" class ="text-light">read only</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="bucketPolicy" value="Put,Get" >
+                <label for="bucketPolicy" class ="text-light">read & write</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">Bucket Ownership</label>
+        </div>
+        <div class="form-group">
+            <label for="ownership" class ="text-light"></label>
+            <div class="radio inline">
+                <input type="radio" name="ownership" value="ObjectWriter" >
+                <label for="ownership" class ="text-light">Object Writer</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="ownership" value="BucketOwnerPreferred" >
+                <label for="ownership" class ="text-light">Bucket Owner Preferred</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" name="ownership" value="BucketOwnerEnforced" >
+                <label for="ownership" class ="text-light">Bucket Owner Enforced</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="remarks" class ="text-bold">Remarks</label>
+            <input type="text" name="remarks" value="" placeholder="additional notes">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">CREATE BUCKET</button>
+        </div>
+    </div>
+</form>
+</div>
+

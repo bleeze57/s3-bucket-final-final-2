@@ -1,0 +1,51 @@
+
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            
+            <div class="nav-brand textTitle"> 
+                <span class="textTextTitle">Bucket Dashboard</span>
+            </div>
+            <!-- form handling -->
+            <form class="show" action="/home" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>Request Level</th>
+                        <th>Bucket Name</th>
+                        <th>Bucket region</th>
+                        <th>Public Access</th>
+                        <th>versioning</th>
+                        <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+            
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow newBucket">
+                    <span class="text-gradient">NEW BUCKET<i class="fas fa-user"></i></span>
+                </a>
+            </div>
+            <a href="https://react-login.onrender.com" class="border-shadow logOut">
+                <span class="text-gradient" >LOG OUT</span>
+            </a>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
