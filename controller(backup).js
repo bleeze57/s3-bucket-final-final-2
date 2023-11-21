@@ -27,8 +27,7 @@ exports.create = (req,res)=>{
     versioning:req.body.versioning,
     bucketPolicy:req.body.bucketPolicy,
     cors:req.body.cors,
-    ownership:req.body.ownership,
-    remarks:req.body.remarks
+    remarks:req.body.cors
 })
 
 // save user in the database
@@ -203,30 +202,6 @@ async.waterfall([
       } 
       
     },
-
-    function putOwnership(callback){
-    
-      const params = {
-        Bucket: bucket.bucketName,
-        OwnershipControls: {
-          Rules: [
-            {
-              ObjectOwnership: bucket.ownership,
-            }
-          ]
-        }
-      };
-
-      S3.putBucketOwnershipControls(params, (err, data) => {
-        if (err) {
-          console.error('Error:', err);
-          callback(err)
-        } else {
-          console.log('Bucket ownership configured:',bucket.ownership,'-->', bucket.bucketName);
-          callback(null)
-        }
-      });
-    }
 
 
 ],function(err) {
@@ -405,30 +380,6 @@ exports.update = (req, res) => {
       //       })
           
       // },
-
-      function updateOwnership(data,callback){
-    
-        const params = {
-          Bucket: new_data.bucketName,
-          OwnershipControls: {
-            Rules: [
-              {
-                ObjectOwnership: new_data.ownership,
-              }
-            ]
-          }
-        };
-  
-        S3.putBucketOwnershipControls(params, (err,result) => {
-          if (err) {
-            console.error('Error:', err);
-            callback(err)
-          } else {
-            console.log('Bucket ownership configured:',new_data.ownership,'-->', new_data.bucketName);
-            callback(null,data)
-          }
-        });
-      },
 
       function updateCORS(data,callback) {
         let corsParams;

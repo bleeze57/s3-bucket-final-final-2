@@ -1,0 +1,31 @@
+{
+  "name": "crud_app",
+  "version": "1.0.0",
+  "description": "S3 Bucket app to create and manage your AWS S3 resource",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "S3 Bucket Automation",
+    "Web Application"
+  ],
+  "author": "mukmen",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "aws-sdk": "^2.1446.0",
+    "axios": "^0.21.4",
+    "body-parser": "^1.20.2",
+    "dotenv": "^8.6.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^5.13.20",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0"
+  }
+}
